@@ -9,10 +9,12 @@
   --cream: hsl(30, 38%, 92%);
   --white: hsl(0, 0%, 100%);
 
-  --fs-sm: 0.75rem;
-  --fs-md: 0.875rem;
-  --fs-xl: 1.8rem;
-  --fs-2xl: 2.2rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2.2rem;
+  --fs-2xl: 2.6rem;
 
   --lh-base: 1.5;
   --lh-title: 1.2;
@@ -24,7 +26,8 @@
   --ff-fraunces: "Fraunces";
   --fw-fraunces-bold: 700;
 
-  --max-w-card: 30rem;
+  --max-w-card-mobile: 30rem;
+  --max-w-card-desktop: 44rem;
 
   --border-r-sm: 0.625rem;
 
@@ -43,7 +46,7 @@
 
 html {
   color: var(--grey);
-  font-size: var(--fs-md);
+  font-size: clamp(var(--fs-sm), 0.831rem + 0.188vw, var(--fs-md));
   font-family: var(--ff-montserrat), sans-serif;
   font-weight: var(--fw-montserrat-medium);
   line-height: var(--lh-base);
@@ -72,6 +75,7 @@ main {
 
 img {
   width: 100%;
+  object-fit: cover;
 }
 
 /* Utilities */
@@ -82,14 +86,14 @@ img {
 
 /* Components */
 .product-category {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .title {
   color: var(--black);
-  font-size: clamp(var(--fs-xl), 1.659rem + 0.601vw, var(--fs-2xl));
+  font-size: clamp(var(--fs-lg), 1.659rem + 0.601vw, var(--fs-xl));
   font-family: var(--ff-fraunces);
   font-weight: var(--fw-fraunces-bold);
   line-height: var(--lh-title);
@@ -97,13 +101,13 @@ img {
 
 .price {
   color: var(--green-500);
-  font-size: clamp(var(--fs-xl), 1.659rem + 0.601vw, var(--fs-2xl));
+  font-size: clamp(var(--fs-lg), 1.659rem + 0.601vw, var(--fs-xl));
   font-family: var(--ff-fraunces);
   font-weight: var(--fw-fraunces-bold);
 }
 
 .discount-price {
-  font-size: clamp(var(--fs-sm), 0.706rem + 0.188vw, var(--fs-md));
+  font-size: clamp(var(--fs-xs), 0.706rem + 0.188vw, var(--fs-sm));
   text-decoration: line-through;
 }
 
@@ -132,7 +136,7 @@ img {
 .product-card {
   background-color: var(--white);
   border-radius: var(--border-r-sm);
-  width: min(var(--max-w-card), 90%);
+  width: min(var(--max-w-card-mobile), 90%);
   overflow: hidden;
 }
 
@@ -152,4 +156,27 @@ img {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+}
+
+@media (width >= 768px) {
+  .product-card {
+    display: flex;
+
+    width: var(--max-w-card-desktop);
+  }
+
+  .product-card picture,
+  .product-card img {
+    min-height: 100%;
+  }
+
+  .product-card__content {
+    flex-basis: 85%;
+
+    justify-content: space-evenly;
+  }
+
+  .title {
+    font-size: clamp(var(--fs-xl), 1.743rem + 0.952vw, var(--fs-2xl));
+  }
 }
