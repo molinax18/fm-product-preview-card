@@ -88,12 +88,12 @@ img {
 .product-category {
   font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
 .title {
   color: var(--black);
-  font-size: clamp(var(--fs-lg), 1.659rem + 0.601vw, var(--fs-xl));
+  font-size: clamp(var(--fs-xl), 1.743rem + 0.952vw, var(--fs-2xl));
   font-family: var(--ff-fraunces);
   font-weight: var(--fw-fraunces-bold);
   line-height: var(--lh-title);
@@ -174,9 +174,5 @@ img {
     flex-basis: 85%;
 
     justify-content: space-evenly;
-  }
-
-  .title {
-    font-size: clamp(var(--fs-xl), 1.743rem + 0.952vw, var(--fs-2xl));
   }
 }
