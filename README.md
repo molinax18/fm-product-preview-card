@@ -16,14 +16,14 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ### Screenshot
 
 <img
-  src="./public/screenshots/product-preview-card-desktop.png.png"
+  src="./public/screenshots/product-preview-card-desktop.png"
   alt="Screenshot of the Product preview card project in desktop size"
   width="400"
   height="auto"
   style="display:inline-block; margin-rigth:5px;" />
 
 <img
-  src="./public/screenshots/product-preview-card-mobile.png.png"
+  src="./public/screenshots/product-preview-card-mobile.png"
   alt="Screenshot of the Product preview card project in mobile size"
   width="400"
   height="auto"
