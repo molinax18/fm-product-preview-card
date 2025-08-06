@@ -32,7 +32,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ### Links
 - [Solution URL](https://github.com/molinax18/fm-product-preview-card)
 
-- [Live Site URL](https://molinax18.github.io/fm-recipe-page/)
+- [Live Site URL](https://molinax18.github.io/fm-product-preview-card/)
 
 ### Built with
 - Semantic HTML5 markup
